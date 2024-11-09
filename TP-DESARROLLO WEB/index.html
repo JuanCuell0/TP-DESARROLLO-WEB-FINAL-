@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>TP Desarrollo Web-Pink Swan</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+            <background="D:\Informacion\Desktop\TP-DESARROLLO WEB\Fondonuevo>
+            <div id="bienvenida"></div>
+        <div class="PinkSwan">
+            <h1>Pink Swan</h1>
+           </div>
+           <div class="Logo">
+            <img src="Logo.png">
+           </div>
+           <div class="Slogan">
+            <h2>Sumergete en las pasiones de una noche inolvidable</h2>
+           </div>
+           <br>
+           <br>
+           <br>
+           <div class="quienessomos">
+            <h1>¿Quienes Somos?</h1>
+           </div>
+           <div class="Contenido1">
+            <img src="Baile casual.png">
+            <h1>Somos una empresa de salones de fiesta dedicada a llevar a cabo diferentes Eventos formales dentro de nuestros salones con diferentes sucursales alrededor de la capital garantizando el brindar una noche magica a nuestros clientes</h1>
+            <img src="Boda ejemplo.png">
+           </div>
+           <br>
+           <br>
+           <br>
+<div class="Nuestroobjetivo">
+<h1>Nuestro Trabajo</h1>
+</div>
+<div class="Contenido2">
+<img src="Foto Trabajo.png">
+<h1><b>Nuestro trabajo consiste en la organizacion de eventos tales como Cumpleaños,Reuniones Formales y Casamientos priorizando la satisfaccion de nuestros clientes para generar experiencas unicas durante los eventos al tener ya alos de experienca en el rubro</b></h1>
+</div>
+<br>
+<br>
+<br>
+<div class="sucursales">
+    <h1>Nuestras Sucursales</h1>
+</div>
+<div class="contenido3">
+    <h1>A Continuacion te presentamos una lista de nuestras differentes sucursales y sus numeros de contacto y direccion</h1>
+</div>
+    <div class="contenido4">
+          <img src="Sucursales.jpg">
+          <ul class="listado">
+                <h1><li>Sede San Martin: San Martin 257/ 4301-4164</li></h1>
+                <h1><li>Sede Barracas: Lanin 24/ 4303-4571</li></h1>
+                <h1><li>Sede San Telmo: Peru 650/ 4302-0776</li></h1>
+                <h1><li>Sede Pilar; Rio de Janeiro 482/ 4303-0901</li></h1>
+          </ul>
+</div>
+<br>
+<br>
+<br>
+<div class="precios">
+    <h1>Precios</h1>
+</div>
+<div class="contenido5">
+    <h1>A continuacion te dejamos una lista con nuestros precios para que puedas ver si te interesan nuestros servicios</h1>
+</div>
+<div class="precios">
+    <h1>Calcula tu precio</h1>
+    <p>Ingresa el número de invitados (entre 15 y 60) para obtener un precio estimado:</p>
+    <input type="number" id="numInvitados" min="15" max="60" placeholder="Número de invitados" />
+    <button id="calcularPrecio">Calcular Precio</button>
+    <p id="resultadoPrecio"></p>
+    <img src="Secretaria.png">
+ </div>
+    <br>
+
+    <br>
+    <div class="registro">
+        <h1>¿Te intereso nuestra pagina?</h1>
+    </div>
+    <div class="contenido7">
+        <h1>Si encontraste el contenido de nuestra organizacion interesante te invitamos a registrate aqui abajo y convertirte en un cliente</h1>
+    </div>
+    <form id="registroForm">
+        <label><b>Nombre</b></label>
+        <input type="text" name="nombre" required />
+        <br>
+        <label><b>Apellido</b></label>
+        <input type="text" name="apellido" required />
+        <br>
+        <label><b>Correo Electrónico</b></label>
+        <input type="email" name="correo" required />
+        <br>
+        <input type="checkbox"> <b>Deseo recibir información sobre novedades y ofertas de Pink Swan</b>
+        <br>
+        <input type="checkbox"> <b>Acepto compartir mi información con Pink Swan</b>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <div class="Gracias">
+        <h1>Gracias por visitar nuestra pagina, a continuacion te dejamos formas de contactarnos</h1>
+    </div>
+    <br>
+    <div class="datosdecontacto">
+        <h3>Correo:<font
+            COLOR="blue">
+            <u>PinkSwan@gmail.com</font></u>, Cuenta de Instagram: <font
+            COLOR="blue">
+            <u>PinkS.Fiestas</font></u> Cuenta de Facebook:<font
+            COLOR="blue">
+            <u>PinkSwan Fiestas Formales</font></u></h3>
+    </div>
+    <script>
+ $(document).ready(function() {
+  
+    const nombreUsuario = prompt("Antes de Ingreasar nos gustaria saber tu Nombre");
+    $('#bienvenida').html(nombreUsuario ? `<h2>Hola ${nombreUsuario} y Bienvenido a...</h2>` : "<h2>Bienvenido a PinkSwan</h2>");
+    $('.PinkSwan').hide().fadeIn(3000);
+    $('.Logo').hide().fadeIn(4000);
+    $('.Slogan').hide().fadeIn(5000);
+
+    $('img[src="Sucursales.jpg"]').mouseenter(function() {
+        $(this).stop(true, true).animate({ width: '120%', height: '120%' }, 300); 
+    }).mouseleave(function() {
+        $(this).stop(true, true).animate({ width: '100%', height: '100%' }, 300); 
+    });
+
+    $('#calcularPrecio').click(function() {
+    const numInvitados = parseInt($('#numInvitados').val());
+    let precio;
+
+    if (numInvitados >= 15 && numInvitados <= 30) {
+        precio = 45000;
+    } else if (numInvitados > 30 && numInvitados <= 50) {
+        precio = 75000;
+    } else if (numInvitados > 50 && numInvitados <= 60) {
+        precio = 105000;
+    } else {
+        $('#resultadoPrecio').text('Por favor ingrese un número de invitados entre 15 y 60.');
+        return;
+    }
+
+    $('#resultadoPrecio').text(`El precio estimado para ${numInvitados} invitados es: $${precio.toLocaleString()}`);
+});
+
+    $('#registroForm').submit(function(event) {
+        const nombre = $('input[name="nombre"]').val();
+        const apellido = $('input[name="apellido"]').val();
+        const email = $('input[name="correo"]').val();
+
+        if (!nombre || !apellido || !email) {
+            alert('Por favor, complete todos los campos obligatorios.');
+            event.preventDefault();
+        } else {
+            alert('Gracias por registrase,Nos Mantendremos en contacto para informarle sobre avances (Ya puedes cerrar esta Pagina).');
+            event.preventDefault();
+        }
+    });
+});
+    </script>
+    
+    </body>
+</html>

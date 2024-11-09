@@ -1,0 +1,117 @@
+body{
+   background-color: pink;
+    background-image:
+}
+.texto{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.PinkSwan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Slogan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 300px;
+        height: 300px;
+    } 
+}
+.quienessomos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Contenido1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        width: 200px;
+        height: 200px;
+        margin-right: 100px;
+    } 
+}
+.Nuestroobjetivo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Contenido2{
+    display: flex;
+    align-items: left;
+    img{
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+    } 
+}
+.sucursales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido4{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    img{
+        width: 400px;
+        height: 400px;
+        margin-right: 100px;
+    } 
+}
+.precios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido6{
+    display: flex;
+    flex-direction: center;
+    justify-content: flex-end;
+    align-items: center;
+    img{
+        width: 350px;
+        height: 350px;
+        margin-left: 100px;
+    } 
+}
+.registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Gracias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.datosdecontacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
